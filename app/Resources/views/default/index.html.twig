@@ -1,5 +1,23 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    Homepage.
+    <h1>Mountains</h1>
+    <table class="records">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Height</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ entity.name }}</td>
+                <td>{{ entity.height }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}

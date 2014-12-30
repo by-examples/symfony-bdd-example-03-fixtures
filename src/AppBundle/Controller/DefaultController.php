@@ -12,6 +12,15 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('default/index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $entities = $em->getRepository('AppBundle:Mountain')->findAll();
+
+        return $this->render(
+            'default/index.html.twig',
+            array(
+                'entities' => $entities,
+            )
+        );
     }
 }
