@@ -3,7 +3,7 @@ How to run the project?
 
 This example is explained in
 the post
-[Symfony/BDD example 03: fixtures](???).
+[Symfony/BDD example 03: fixtures](http://by-examples.net/2014/12/31/bdd-example-mountains.html).
 
 ##1. Preliminary step
 
