@@ -17,12 +17,15 @@ in the post titled
     $ git clone https://github.com/by-examples/symfony-bdd-example-03-fixtures.git
     $ cd symfony-bdd-example-03-fixtures
     $ vagrant up
+    $ vagrant ssh
+    $ composer install -o
+    $ php app/console doctrine:schema:update --force
+    $ php app/console doctrine:fixtures:load -n
 
 ##3. Running the tests
 
-    $ vagrant up
     $ vagrant ssh
-    $ composer install -o
+    $ php app/console cache:clear --env=prod
     $ bin/behat
 
 ##4. Visit the application with the browser
